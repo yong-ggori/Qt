@@ -7,7 +7,7 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../IoTQtClient/mainwidget.h"
+#include "../../IoTQtClient_tab4_test/mainwidget.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)

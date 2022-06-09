@@ -1,0 +1,12 @@
+release/main.o
+release/mainwidget.o
+release/socketclient.o
+release/tab2socketclient.o
+release/tab3controlpannel.o
+release/tab4sensordisplay.o
+release/qrc_IoTQtClient.o
+release/moc_mainwidget.o
+release/moc_socketclient.o
+release/moc_tab2socketclient.o
+release/moc_tab3controlpannel.o
+release/moc_tab4sensordisplay.o

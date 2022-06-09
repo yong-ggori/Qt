@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -19,28 +20,42 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWidget
 {
 public:
+    QVBoxLayout *verticalLayout;
     QTabWidget *tabWidget;
     QWidget *pTab1;
     QWidget *pTab2;
+    QWidget *pTab3;
+    QWidget *pTab4;
 
     void setupUi(QWidget *MainWidget)
     {
         if (MainWidget->objectName().isEmpty())
             MainWidget->setObjectName(QString::fromUtf8("MainWidget"));
-        MainWidget->resize(800, 600);
+        MainWidget->resize(580, 380);
+        verticalLayout = new QVBoxLayout(MainWidget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         tabWidget = new QTabWidget(MainWidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
-        tabWidget->setGeometry(QRect(0, 0, 801, 601));
+        tabWidget->setEnabled(true);
         pTab1 = new QWidget();
         pTab1->setObjectName(QString::fromUtf8("pTab1"));
         tabWidget->addTab(pTab1, QString());
         pTab2 = new QWidget();
         pTab2->setObjectName(QString::fromUtf8("pTab2"));
         tabWidget->addTab(pTab2, QString());
+        pTab3 = new QWidget();
+        pTab3->setObjectName(QString::fromUtf8("pTab3"));
+        tabWidget->addTab(pTab3, QString());
+        pTab4 = new QWidget();
+        pTab4->setObjectName(QString::fromUtf8("pTab4"));
+        tabWidget->addTab(pTab4, QString());
+
+        verticalLayout->addWidget(tabWidget);
+
 
         retranslateUi(MainWidget);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWidget);
@@ -51,6 +66,8 @@ public:
         MainWidget->setWindowTitle(QCoreApplication::translate("MainWidget", "MainWidget", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(pTab1), QCoreApplication::translate("MainWidget", "Tab 1", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(pTab2), QCoreApplication::translate("MainWidget", "Tab 2", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(pTab3), QCoreApplication::translate("MainWidget", "Tab 3", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(pTab4), QCoreApplication::translate("MainWidget", "Tab 4", nullptr));
     } // retranslateUi
 
 };

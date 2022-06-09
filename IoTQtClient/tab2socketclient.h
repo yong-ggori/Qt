@@ -2,6 +2,9 @@
 #define TAB2SOCKETCLIENT_H
 
 #include <QWidget>
+#include <QTime>                        // log 시간 작성 위한 QTime 클래스 사용하기 위한 헤더파일 선언
+#include <QDebug>                       // QDebug 함수 사용 위한 헤더 파일 선언
+#include <QMessageBox>
 #include "socketclient.h"
 
 namespace Ui {
@@ -19,11 +22,14 @@ public:
 private:
     Ui::Tab2SocketClient *ui;
     SocketClient *pSocketClient;
-private slots:
-    void slotConnectToServer(bool);     // slot 함수 정의
+private slots:                          // slot 함수 정의
+    void slotConnectToServer(bool);
     void slotSocketRecvUpdate(QString);
-signals:
-    void sigSocketRecv(QString);        // signal 함수 정의
+    void slotSocketSendData();
+    void slotSocketSendData(QString);   // slotSocketSendData 중복 정의, 매개 변수 달리 함
+signals:                                // signal 함수 정의, 발생 시키고 싶은 이벤트, 이벤트 발생 시 원하는 함수 실행
+    void sigSocketRecv(QString);
+    void sigTab3RecvData(QString);
 };
 
 #endif // TAB2SOCKETCLIENT_H

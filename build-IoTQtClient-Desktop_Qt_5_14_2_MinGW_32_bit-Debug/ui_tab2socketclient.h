@@ -32,15 +32,15 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QTextEdit *pTERecieveData;
     QHBoxLayout *horizontalLayout_3;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit;
-    QPushButton *pushButton;
+    QLineEdit *pLERecieveID;
+    QLineEdit *pLESendData;
+    QPushButton *pPBSendButton;
 
     void setupUi(QWidget *Tab2SocketClient)
     {
         if (Tab2SocketClient->objectName().isEmpty())
             Tab2SocketClient->setObjectName(QString::fromUtf8("Tab2SocketClient"));
-        Tab2SocketClient->resize(903, 656);
+        Tab2SocketClient->resize(580, 380);
         verticalLayout = new QVBoxLayout(Tab2SocketClient);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
@@ -80,20 +80,20 @@ public:
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        lineEdit_2 = new QLineEdit(Tab2SocketClient);
-        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        pLERecieveID = new QLineEdit(Tab2SocketClient);
+        pLERecieveID->setObjectName(QString::fromUtf8("pLERecieveID"));
 
-        horizontalLayout_3->addWidget(lineEdit_2);
+        horizontalLayout_3->addWidget(pLERecieveID);
 
-        lineEdit = new QLineEdit(Tab2SocketClient);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        pLESendData = new QLineEdit(Tab2SocketClient);
+        pLESendData->setObjectName(QString::fromUtf8("pLESendData"));
 
-        horizontalLayout_3->addWidget(lineEdit);
+        horizontalLayout_3->addWidget(pLESendData);
 
-        pushButton = new QPushButton(Tab2SocketClient);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pPBSendButton = new QPushButton(Tab2SocketClient);
+        pPBSendButton->setObjectName(QString::fromUtf8("pPBSendButton"));
 
-        horizontalLayout_3->addWidget(pushButton);
+        horizontalLayout_3->addWidget(pPBSendButton);
 
         horizontalLayout_3->setStretch(0, 2);
         horizontalLayout_3->setStretch(1, 6);
@@ -116,7 +116,7 @@ public:
         pLabel->setText(QCoreApplication::translate("Tab2SocketClient", "\354\210\230\354\213\240 \353\215\260\354\235\264\355\204\260", nullptr));
         pPBRecieveDataClear->setText(QCoreApplication::translate("Tab2SocketClient", "\354\210\230\354\213\240 \354\202\255\354\240\234", nullptr));
         pPBServerConnect->setText(QCoreApplication::translate("Tab2SocketClient", "\354\204\234\353\262\204 \354\227\260\352\262\260", nullptr));
-        pushButton->setText(QCoreApplication::translate("Tab2SocketClient", "\354\206\241\354\213\240", nullptr));
+        pPBSendButton->setText(QCoreApplication::translate("Tab2SocketClient", "\354\206\241\354\213\240", nullptr));
     } // retranslateUi
 
 };

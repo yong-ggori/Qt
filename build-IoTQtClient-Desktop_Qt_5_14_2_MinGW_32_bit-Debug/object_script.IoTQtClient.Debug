@@ -1,0 +1,12 @@
+debug/main.o
+debug/mainwidget.o
+debug/socketclient.o
+debug/tab2socketclient.o
+debug/tab3controlpannel.o
+debug/tab4sensordisplay.o
+debug/qrc_IoTQtClient.o
+debug/moc_mainwidget.o
+debug/moc_socketclient.o
+debug/moc_tab2socketclient.o
+debug/moc_tab3controlpannel.o
+debug/moc_tab4sensordisplay.o
